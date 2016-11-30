@@ -1,0 +1,42 @@
+<versiondebtItems>
+  <versiondebtItem groupId="javax" artifactId="javaee-api">
+    <usedVersion>
+      <name>7.0</name>
+      <timestamp>2013-05-20 16:16:24.0 UTC</timestamp>
+    </usedVersion>
+    <latestVersion>
+      <name>7.0</name>
+      <timestamp>2013-05-20 16:16:24.0 UTC</timestamp>
+    </latestVersion>
+  </versiondebtItem>
+  <versiondebtItem groupId="org.mockito" artifactId="mockito-core">
+    <usedVersion>
+      <name>2.2.16</name>
+      <timestamp>2016-11-14 11:12:47.0 UTC</timestamp>
+    </usedVersion>
+    <latestVersion>
+      <name>2.2.22</name>
+      <timestamp>2016-11-21 11:17:11.0 UTC</timestamp>
+    </latestVersion>
+  </versiondebtItem>
+  <versiondebtItem groupId="junit" artifactId="junit">
+    <usedVersion>
+      <name>4.11</name>
+      <timestamp>2012-11-14 19:21:47.0 UTC</timestamp>
+    </usedVersion>
+    <latestVersion>
+      <name>4.12</name>
+      <timestamp>2014-12-04 16:17:43.0 UTC</timestamp>
+    </latestVersion>
+  </versiondebtItem>
+  <versiondebtItem groupId="org.slf4j" artifactId="slf4j-api">
+    <usedVersion>
+      <name>1.7.6</name>
+      <timestamp>2014-02-05 22:37:14.0 UTC</timestamp>
+    </usedVersion>
+    <latestVersion>
+      <name>1.7.21</name>
+      <timestamp>2016-04-04 18:36:40.0 UTC</timestamp>
+    </latestVersion>
+  </versiondebtItem>
+</versiondebtItems>

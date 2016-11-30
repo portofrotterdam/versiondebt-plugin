@@ -1,0 +1,26 @@
+<div class="widget-row">
+
+  <div class="widget-span widget-span-x">
+    <div class="widget-measure-container">
+
+      <div class="widget-measure widget-measure-main">
+        <span class="widget-label"><%= metric('total_dependency_debt_string').description -%></span>
+
+        <span class="big">
+          <%= format_measure('total_dependency_debt_string', :suffix => '', :url => url_for_drilldown('total_dependency_debt'), :default => '-') %>
+          <%= dashboard_configuration.selected_period? ? format_variation('total_dependency_debt') : trend_icon('total_dependency_debt') -%>
+        </span>
+
+      </div>
+
+      <div class="widget-measure">
+        <span class="widget-label"><%= metric('dependency_amount').description -%></span>
+        <span class="big">
+          <%= format_measure('dependency_amount', :suffix => '', :url => url_for_drilldown('dependency_amount'), :default => '-') %>
+          <%= dashboard_configuration.selected_period? ? format_variation('dependency_amount') : trend_icon('dependency_amount') -%>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</div>

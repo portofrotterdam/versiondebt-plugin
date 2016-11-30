@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="versiondebtItems" type="versiondebtItemsType"/>
+
+    <xs:complexType name="versiondebtItemType">
+        <xs:sequence>
+            <xs:element type="versionType" name="usedVersion" minOccurs="1" maxOccurs="1"/>
+            <xs:element type="versionType" name="latestVersion" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="groupId" use="required"/>
+        <xs:attribute type="xs:string" name="artifactId" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="versiondebtItemsType">
+        <xs:sequence>
+            <xs:element type="versiondebtItemType" name="versiondebtItem"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="versionType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name"/>
+            <xs:element type="xs:date" name="timestamp"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
