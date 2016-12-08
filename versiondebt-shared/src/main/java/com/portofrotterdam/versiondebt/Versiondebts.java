@@ -44,7 +44,11 @@ public class Versiondebts implements Serializable {
 	}
 
 	public List<VersiondebtItem> getVersiondebtItems() {
-		return Collections.unmodifiableList(new ArrayList<>(versiondebtItems));
+		if (versiondebtItems != null) {
+			return Collections.unmodifiableList(new ArrayList<>(versiondebtItems));
+		} else {
+			return Collections.emptyList();
+		}
 	}
 
 	@XStreamAlias("versiondebtItem")
