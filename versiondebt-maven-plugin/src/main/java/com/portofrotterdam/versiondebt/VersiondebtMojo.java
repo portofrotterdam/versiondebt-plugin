@@ -246,14 +246,17 @@ public class VersiondebtMojo extends AbstractMojo {
             e1.printStackTrace();
         }
         final Metadata repoMetadata = metadata.getMetadata();
-        final String releasedVersion = repoMetadata.getVersioning().getRelease();
-        if (releasedVersion != null) {
-            return releasedVersion;
+        if (repoMetadata.getVersioning() != null) {
+            final String releasedVersion = repoMetadata.getVersioning().getRelease();
+            if (releasedVersion != null) {
+                return releasedVersion;
+            }
+            final String latestVersion = repoMetadata.getVersioning().getLatest();
+            if (latestVersion != null) {
+                return latestVersion;
+            }
         }
-        final String latestVersion = repoMetadata.getVersioning().getLatest();
-        if (latestVersion != null) {
-            return latestVersion;
-        }
+
         return repoMetadata.getVersion();
     }
 
